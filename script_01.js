@@ -30,9 +30,16 @@
 // }
 
 // Inkrement (var. Schrittweite)
-for (let i = 0; i < 100; i+=10) {
-    output(i);
+// for (let i = 0; i < 100; i+=10) {
+//     output(i);
+// }
+
+/* 02b. For-Schleife für Array-Index (Iteration)*/
+let arr = ["Ich","bin","die","coole","Maxine","Mützerich"];
+for (let i = 0; i < arr.length; i++) {
+     output(arr[i]);
 }
+
 
 /*** 01. Funktionalität mit Einzelparametern */
 // --> "Ich bin Max Mütze."
