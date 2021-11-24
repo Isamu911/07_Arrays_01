@@ -73,18 +73,15 @@ Solange die Variable existiert, bleibt dieser erhalten
 hier: Verkettung eines Strings // Transponierung
 */
 
-let str = ""; // Anfangswert
-const addStr = "Test";
-const gap = " ";
+// let str = ""; // Anfangswert
+// const addStr = "Test";
+// const gap = " ";
 
-for (let i = 0; i < 5; i++) {
-    // output("in der loop: " + str);
-    str = str + addStr + gap;
-}
-output("nach der loop: " + str);
-
-
-
+// for (let i = 0; i < 5; i++) {
+//     // output("in der loop: " + str);
+//     str = str + addStr + gap;
+// }
+// output("nach der loop: " + str);
 
 
 /*** 01. Funktionalität mit Einzelparametern */
@@ -124,29 +121,31 @@ function getSentenceArr(arr) {
 /*** 01b. Funktionalität mit Array 2  */
 // Transponierung:  untereinander ---> nebeneinander
 // Helge Schneider: Anananandereihung ...
-
-// output(getSentenceArr2(["Ich","bin","Maxine","Mützerich"]));
-
+output(getSentenceArr2(["Ich","bin","Maxine","Mützerich"]));
+output(getSentenceArr2(["Ich","bin","die","coole","Maxine","Mützerich"]));
+output(getSentenceArr2(["Ich","bin","Max"]));
+output(getSentenceArr2([]));
 function getSentenceArr2(arr) {
+
     const gap = " ";
     const punct = ".";
     let str = "";
 
     for (let i = 0; i < arr.length; i++) {
-        output(arr[i]);
+
+        // wenn ich noch NICHT das letzte Element habe --> gap
+        // wenn ich das letzte Element habe -->  punct
+        // a = a + 1 || a += 1  
+
+        if ( i != arr.length-1 ) {
+            str += arr[i] + gap; 
+        } else {
+            str += arr[i] + punct; 
+        }
     }
 
     return str;
 }
-
-
-
-
-
-
-
-
-
 
 // Modul: Ausgabe in Konsole : Test
 // output("hi"); 
